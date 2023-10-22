@@ -1,0 +1,142 @@
+package jhojho;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JHOJHO {
+    private Connection SQLConexion;
+
+    public static void main(String[] args) {
+        JHOJHO app = new JHOJHO();
+        app.iniciar();
+    }
+public void insertarUsuario(int id, String nombre, String contraseña) {
+    try {
+        Statement statement = SQLConexion.createStatement();
+
+        // Verificar si el ID ya existe en la tabla antes de insertar
+        ResultSet existingUser = statement.executeQuery("SELECT id_usuarios FROM usuarios WHERE id_usuarios = " + id);
+        if (existingUser.next()) {
+            System.out.println("El usuario con ID " + id + " ya existe en la base de datos.");
+        } else {
+            String query = "INSERT INTO usuarios (id_usuarios, nombre, contraseña) VALUES (" + id + ", '" + nombre + "', '" + contraseña + "')";
+            int filasAfectadas = statement.executeUpdate(query);
+
+            if (filasAfectadas > 0) {
+                System.out.println("Nuevo usuario insertado.");
+            } else {
+                System.out.println("No se pudo insertar el usuario.");
+            }
+        }
+
+        statement.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
+public void actualizarContraseña(int id, String nuevaContraseña) {
+    try {
+        Statement statement = SQLConexion.createStatement();
+        String query = "UPDATE usuarios SET contraseña = '" + nuevaContraseña + "' WHERE id_usuarios = " + id;
+        int filasAfectadas = statement.executeUpdate(query);
+        
+        if (filasAfectadas > 0) {
+            System.out.println("Contraseña actualizada.");
+        } else {
+            System.out.println("No se pudo actualizar la contraseña.");
+        }
+        
+        statement.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+public void eliminarUsuario(int id) {
+    try {
+        Statement statement = SQLConexion.createStatement();
+        String query = "DELETE FROM usuarios WHERE id_usuarios = " + id;
+        int filasAfectadas = statement.executeUpdate(query);
+        
+        if (filasAfectadas > 0) {
+            System.out.println("Usuario eliminado.");
+        } else {
+            System.out.println("No se pudo eliminar el usuario.");
+        }
+        
+        statement.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
+    public void iniciar() {
+        conectar(); // Paso 1: Establecer la conexión a la base de datos
+        listarUsuarios(); // Paso 2: Listar los datos de la tabla de usuarios
+        cerrarConexion(); // Paso 3: Cerrar la conexión a la base de datos
+    }
+
+    public void conectar() {
+    String usuario = "root";
+    String password = "";
+    String host = "localhost";
+    String puerto = "3306";
+    String namebd = "jhojho";
+    String driver = "com.mysql.cj.jdbc.Driver";
+    String databaseURL = "jdbc:mysql://" + host + ":" + puerto + "/" + namebd + "?useSSL=false";
+
+    try {
+        Class.forName(driver);
+        SQLConexion = DriverManager.getConnection(databaseURL, usuario, password);
+        System.out.println("Conexión exitosa a la base de datos.");
+        
+        // Ahora que la conexión está establecida, realiza las operaciones.
+        insertarUsuario(4, "NuevoUsuario", "nuevacontraseña");
+        actualizarContraseña(2, "nuevacontraseña123");
+        eliminarUsuario(3);
+        
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+
+    public void listarUsuarios() {
+        try {
+            Statement statement = SQLConexion.createStatement();
+            String query = "SELECT id_usuarios, nombre, contraseña FROM usuarios";
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                int idUsuario = resultSet.getInt("id_usuarios");
+                String nombre = resultSet.getString("nombre");
+                String contraseña = resultSet.getString("contraseña");
+
+                System.out.println("ID: " + idUsuario);
+                System.out.println("Nombre: " + nombre);
+                System.out.println("Contraseña: " + contraseña);
+                System.out.println("---------------------------");
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void cerrarConexion() {
+        try {
+            if (SQLConexion != null) {
+                SQLConexion.close();
+                System.out.println("Conexión cerrada.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

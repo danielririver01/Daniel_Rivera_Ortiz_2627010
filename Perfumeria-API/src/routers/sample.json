@@ -1,0 +1,92 @@
+[
+    {
+        "id": "1",
+        "nombre": "BLGARI",
+        "cantidad": "36",
+        "precio": "150000"
+    },
+    {
+        "id": "2",
+        "nombre": "Chanel No. 5",
+        "cantidad": "24",
+        "precio": "220000"
+    },
+    {
+        "id": "3",
+        "nombre": "Dolce & Gabbana Light Blue",
+        "cantidad": "18",
+        "precio": "180000"
+    },
+    {
+        "id": "4",
+        "nombre": "Versace Bright Crystal",
+        "cantidad": "30",
+        "precio": "160000"
+    },
+    {
+        "id": "5",
+        "nombre": "Calvin Klein Euphoria",
+        "cantidad": "42",
+        "precio": "190000"
+    },
+    {
+        "id": "6",
+        "nombre": "Yves Saint Laurent Black Opium",
+        "cantidad": "22",
+        "precio": "230000"
+    },
+    {
+        "id": "7",
+        "nombre": "Gucci Guilty",
+        "cantidad": "28",
+        "precio": "210000"
+    },
+    {
+        "id": "8",
+        "nombre": "Paco Rabanne 1 Million",
+        "cantidad": "15",
+        "precio": "250000"
+    },
+    {
+        "id": "9",
+        "nombre": "Prada Candy",
+        "cantidad": "20",
+        "precio": "170000"
+    },
+    {
+        "id": "10",
+        "nombre": "Marc Jacobs Daisy",
+        "cantidad": "32",
+        "precio": "200000"
+    },
+    {
+        "id": "11",
+        "nombre": "Hugo Boss Bottled",
+        "cantidad": "25",
+        "precio": "180000"
+    },
+    {
+        "id": "12",
+        "nombre": "Armani Code",
+        "cantidad": "12",
+        "precio": "220000"
+    },
+    {
+        "id": "13",
+        "nombre": "Issey Miyake L'Eau d'Issey",
+        "cantidad": "40",
+        "precio": "170000"
+    },
+    {
+        "id": "14",
+        "nombre": "Ralph Lauren Polo Red",
+        "cantidad": "10",
+        "precio": "240000"
+    },
+    {
+        "id": "15",
+        "nombre": "Burberry Brit",
+        "cantidad": "26",
+        "precio": "190000"
+    }
+]
