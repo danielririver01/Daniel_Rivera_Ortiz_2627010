@@ -10,10 +10,6 @@
     <!-- Conecta con la fuente de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Enlace a la fuente Roboto desde Google Fonts -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,400&family=Roboto:wght@700&display=swap');
-      </style>
     <!-- Enlaza la hoja de estilos CSS -->
     <link rel="stylesheet" href="CSS/estilos.CSS">
 </head>
@@ -66,7 +62,6 @@
     </div>
 </section>
 </main>
-
     <script src="js/script.js"></script>
     <footer>
     </footer>
