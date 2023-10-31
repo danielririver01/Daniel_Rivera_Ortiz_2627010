@@ -14,10 +14,13 @@
 <body>
     <header>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#"> Compras</a>
-            <a href="../Pagina web-Registro e inicio de sesion/Index.php">Iniciar Sesion</a>
-            <a href="../Pagina web-Registro e inicio de sesion/Index.php">Registrarse</a>
+            <a href="#">Maquillaje </a>
+            <a href="#"> Perfumeria </a>
+            <a href="../Pagina Joyeria/index.php"> Joyeria</a>
+              <a href="#"> Favoritos | </a>
+              <a href="#"> C.de la Piel </a>
+            <a href="../Pagina web-Registro e inicio de sesion/Index.php">Iniciar Sesion |</a>
+            <a href="../Pagina web-Registro e inicio de sesion/Index.php"> Cerrar sesion</a>
         </nav>
         <section class="textos-header">
             <h1>Pensando en ti y en lo que te mereces</h1>
@@ -54,62 +57,55 @@
         </section>
         <section class="portafolio">
             <div class="contenedor">
-                <h2 class="titulo">Compras por Categorias</h2>
+                <h2 class="titulo">Productos que tienes que conocer </h2>
                 <div class="galeria-port">
                     <div class="imagen-port">
                         <img src="./img/cuidado personal/label locion.jpg" alt="Locion Label">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="/img/cuidado personal/cepillo de dientes electrico.png" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Perfumes de la mejores marcas</p>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="img/crema_01.PNG" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Producto que protegen tu piel</p>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="img/img-09.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Productos Naturales</p>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="img/cuidado personal/Jabón líquido para manos.png" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Producto inigualable</p>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="img/joyeria_01.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Joyeria unica</p>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="img/sets_01.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Producto excelente</p>
                         </div>
                     </div>
                     <div class="imagen-port">
                         <img src="img/sets_02.png" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
-                            <p>Mas Detalles</p>
+                            <p>Sets  de calidad</p>
                         </div>
                     </div>
                 </div>
@@ -177,7 +173,7 @@
         </div>
         <h2 class="titulo-final">&copy; Jhoan Daniel Rivera | Jhon Heyner Quintero</h2>
     </footer>
-    <script src="https://kit.fontawesome.com/b8565059b2.js" crossorigin="anonymous"></script>
+   
 </body>
 
 </html>
